@@ -1,6 +1,6 @@
 package 剑指offer.数据结构;
 
-import 剑指offer.数据结构.bean.ListNode;
+import commons.sturcture.ListNode;
 
 public class Offer_06 {
 

@@ -1,4 +1,4 @@
-package 剑指offer.数据结构.bean;
+package commons.sturcture;
 
 public class ListNode {
 

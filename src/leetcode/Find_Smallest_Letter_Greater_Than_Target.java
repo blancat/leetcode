@@ -1,4 +1,4 @@
-package issue;
+package leetcode;
 
 /**
  * Created by sendo on 20/01/2018.

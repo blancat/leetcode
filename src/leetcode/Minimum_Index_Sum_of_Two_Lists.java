@@ -1,4 +1,4 @@
-package issue;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
