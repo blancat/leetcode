@@ -1,12 +1,8 @@
 package 剑指offer.数据结构;
 
-public class Offer_06 {
+import 剑指offer.数据结构.bean.ListNode;
 
-    public class ListNode {
-      int val;
-      ListNode next;
-      ListNode(int x) { val = x; }
-    }
+public class Offer_06 {
 
     /**
      * 输入一个链表的头节点，从尾到头反过来返回每个节点的值（用数组返回）。
