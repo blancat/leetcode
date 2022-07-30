@@ -1,9 +1,41 @@
 package leetcode.LinkNode;
 
 import commons.sturcture.ListNode;
+import commons.utils.CommonUtils;
+
+import java.util.Arrays;
+import java.util.PriorityQueue;
 
 public class Leetcode_23 {
 
+    public static void main(String[] args) {
+        Leetcode_23 fun = new Leetcode_23();
+        ListNode listNode1 = CommonUtils.buildListNode(Arrays.asList(1, 4, 5));
+        ListNode listNode2 = CommonUtils.buildListNode(Arrays.asList(1, 3, 4));
+        ListNode listNode3 = CommonUtils.buildListNode(Arrays.asList(2, 6));
+        ListNode[] lists = {listNode1, listNode2, listNode3};
+        fun.mergeKLists2(lists);
+    }
+
+
+    ListNode mergeKLists2(ListNode[] lists) {
+        if (lists.length == 0) return null;
+        ListNode dummy = new ListNode(-1);
+        ListNode p = dummy;
+        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(lists.length, (a, b) -> (a.val - b.val));
+        for (ListNode listNode : lists) {
+            priorityQueue.add(listNode);
+        }
+        while (!priorityQueue.isEmpty()) {
+            ListNode listNode = priorityQueue.poll();
+            p.next = listNode;
+            if (listNode.next != null) {
+                priorityQueue.add(listNode.next);
+            }
+            p = p.next;
+        }
+        return dummy.next;
+    }
 
     public ListNode mergeKLists(ListNode[] list) {
         // merge K list
